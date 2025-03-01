@@ -70,14 +70,14 @@
                                  ondragover="handleDragOver(event)" 
                                  ondragleave="handleDragLeave(event)" 
                                  ondrop="handleDrop(event)">
-                                <!-- <input type="file" id="fileInput" name="file" accept=".txt" hidden required> -->
+                                <input type="file" id="fileInput" name="file" accept=".txt" hidden required>
                                 
                                 <div class="mb-3">
                                     <i class="bi bi-cloud-arrow-up upload-icon"></i>
                                 </div>
                                 <h5>Drag & Drop Chat File</h5>
                                 <p class="text-muted">or</p>
-                                <button type="button" class="btn btn-primary" onclick="document.getElementById('fileInput').click()">
+                                <button type="button" id="browseFilesBtn" class="btn btn-primary">
                                     Browse Files
                                 </button>
                 
@@ -185,14 +185,16 @@
         
         // Manual file selection handler
         document.getElementById('fileInput').addEventListener('change', function (e) {
-            const file = e.target.files[0];
-            if (file) {
-                handleFileUpload(file);
-            }
-        });
-        
-        
-        
+        const file = e.target.files[0];
+        if (file) {
+            handleFileUpload(file);
+        }
+    });
+
+    // Browse Files button handler
+    document.getElementById('browseFilesBtn').addEventListener('click', function() {
+        document.getElementById('fileInput').click();
+    });
             </script>
 </body>
 </html>
