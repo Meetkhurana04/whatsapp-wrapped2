@@ -179,6 +179,42 @@
         color: #34495e;
         border: 1px solid rgba(0, 0, 0, 0.05);
     }
+    .name-btn {
+        position:fixed;
+        top: 15px;
+        right: 15px;
+        /* background: #3498db; */
+        /* background: linear-gradient(135deg, #ffe5e5, #ffdcdc); */
+        /* background: linear-gradient(135deg, #fff3d6, #ffebc2); no choice */
+        /* background: linear-gradient(135deg, #e6f4ea, #d4edda); */
+        background: linear-gradient(135deg, #d6e4ff, #e7f0fd, #d6e4ff);
+
+        color: #2980b9;
+        /* color: #343a40; */
+        /* color: #9b59b6; */
+
+        border: none;
+        padding: 12px 24px;
+        border-radius: 30px;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    
+    .name-btn:hover {
+        background: linear-gradient(135deg, #d6e4ff, #e7f0fd, #d6e4ff);
+        transform: translateY(-3px);
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+    }
+    
+    .name-emoji {
+        font-size: 14px;
+    }
     
     /* Back Button */
     .back-btn {
@@ -209,6 +245,8 @@
     .back-emoji {
         font-size: 18px;
     }
+
+
     .whatsapp-share-container {
   position: relative;
   margin: auto;
@@ -277,7 +315,7 @@
             grid-template-columns: 1fr; /* Stack tiles */
             gap: 15px;
             padding: 15px;
-            width: 95%;
+            width : 95%;
         }
     
         .mcount, .topused1, .ilevel, .topused2, .words2, .extras {
@@ -322,6 +360,11 @@
             <span>Home</span>
         </button>
     </form>
+    <button type="button" class="name-btn">
+        <span class="name-emoji">©️</span>
+        <span>by Meet</span>
+        
+    </button>
     
 
 <h1>  Whatsapp Wrapped 
